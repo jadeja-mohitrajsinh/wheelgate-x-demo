@@ -1,6 +1,6 @@
 {
-  "repository": "acme-corp/python-service",
-  "repository_id": 458921001,
+  "repository": "jadeja-mohitrajsinh/wheelgate-x-demo",
+  "repository_id": 1466618621,
   "policy_version": "startup-v1",
   "approved_baseline": {
     "package": "samplepkg",
