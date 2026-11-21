@@ -1,0 +1,11 @@
+{
+  "repository": "acme-corp/python-service",
+  "repository_id": 458921001,
+  "policy_version": "startup-v1",
+  "approved_baseline": {
+    "package": "samplepkg",
+    "version": "1.0.0",
+    "wheel_sha256": "3a0df47a46c1b3f7ddcaad63d276b509bc9bc64e207908b6cb1e89b7b9cf4b12",
+    "approved_by": "security-lead@wheelgate.org"
+  }
+}

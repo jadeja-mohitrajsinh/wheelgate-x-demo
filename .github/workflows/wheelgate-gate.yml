@@ -1,0 +1,22 @@
+name: WheelGate X Pull Request Security Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'requirements.txt'
+
+jobs:
+  wheelgate-verification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR Head
+        uses: actions/checkout@v4
+
+      - name: Dispatch WheelGate X Assessment
+        run: |
+          echo "Triggering WheelGate X deterministic merge check..."
+          curl -s -X POST http://127.0.0.1:8000/api/webhook \
+            -H "Content-Type: application/json" \
+            -H "X-GitHub-Event: pull_request" \
+            -d '{"action":"synchronize","number":42,"repository":{"id":458921001,"full_name":"acme-corp/python-service"}}'
